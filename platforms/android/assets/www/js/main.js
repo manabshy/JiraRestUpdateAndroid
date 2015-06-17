@@ -140,8 +140,8 @@ jQuery(document).ready(function() {
 				},
 				error: function(data){
 					console.log('fail to upload');
-	                  $( "#dialog").text('upload Failed!');	
-	                  $( "#dialog" ).dialog();
+	                  $( "#errordialog").text('upload Failed!');	
+	                  $( "#errordialog" ).dialog();
 
 				}
 		});		
