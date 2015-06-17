@@ -56,6 +56,7 @@
                     async: false,
                     success: function (issuedata) {
                       $(function() {
+                          $( "#dialog").text('WO updated in JIRA').css('color','#449d44');  
                           $( "#dialog" ).dialog();
                       });
 
