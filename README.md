@@ -86,4 +86,36 @@ bin ./start.sh
 
 Set the JIRA Home - WEB-INF/classes/cata.properties
 
+/*****If getting below errors******/
+
+No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost' is therefore not allowed access
+
+Fix:
+
+Close the chrome, Open the Terminal (If close doesn’t work then - Force Quit - Chrome on mac) - Then run the below command
+
+open -a Google\ Chrome --args --disable-web-security
+
+The above command will let you bypass the error  
+
+
+/****Enable Device Debugging on Chrome ****/
+on the address bar of the Chrome browser:
+
+chrome://inspect
+
+/***Run the App on Actual Device***/
+
+cordova run android
+
+
+/***Something to Note****/
+
+You develop at -  /Users/manan/Sites/myproject/phonegap_projects/wo/www
+
+When you do the build codes gets deployed to /Users/manan/Sites/myproject/phonegap_projects/wo/platforms/android/assets/www
+
+
+
+
  
