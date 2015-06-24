@@ -24,7 +24,7 @@
 <body ng-app="formApp" ng-controller="formController">
   
   <div class="container global-border uuBackground">
-    <div class="row div-bottom">
+    <div class="row">
       <div class="col-sm-6 form-name text-left">
         <h2>Work Order - Update</h2>
         <span class="header">For use by Retailers</span>
@@ -41,13 +41,20 @@
           <fieldset class="scheduler-border">
             <legend class="scheduler-border">Work Order Details</legend>
 
-            <div class="form-group">
-                <label for="woNumber">Work Order Number:</label>  
+            <div class="form-group col-sm-6">
+                <span id="errorMessage">No Record exists!!</span>
+                <input type="text" id="woNumberText" name="woNumberText" class="form-control" placeholder="Enter WO">
+            </div>                
+            <div class="form-group col-sm-6">
                 <select id="woNumber" name="woNumber" class="form-control">
                   <option>Please Select</option>
                 </select>               
-            </div>      
-            <!--          
+            </div>  
+            <div class="form-group">
+                <label for="issType">Issue Type:</label>  
+                <input type="text" class="form-control" id="issueType" name="issueType" value="" readonly/>              
+            </div>
+            <!--         
             <div class="form-group desktop">
                 <label for="issType">Issue Type:</label>  
                 <input type="text" class="form-control" id="issueType" name="issueType" value="" readonly/>              
@@ -113,11 +120,13 @@
                 <input type="text" class="form-control" id="bannerName" placeholder="Customer Name" value="Manchester City Council" readonly>                      
             </div>  
             <div class="form-group">
+                <label for="issType">Issue ID:</label>  
+                <input type="text" class="form-control" id="issueId" name="issueId" value="" readonly/>              
+            </div>              
+            <div class="form-group">
                 <label for="issType">Issue Description:</label>  
                 <input type="text" class="form-control" id="issueDescription" name="issueDescription" value="" readonly/>              
             </div>  
-             
- 
           <div class="form-group">
               <label for="spidNo">SPID:</label>    
           <input type="text" class="form-control" id="servicePointId" name="servicePointId" placeholder="Service point id" value="UU-0000920499" readonly/>                      
@@ -156,7 +165,7 @@
           <div id="errordialog" title="Error">
             <p></p>
           </div>              
-                       
+
       </div>    
     </form>    <!-- SHOW DATA FROM INPUTS AS THEY ARE BEING TYPED -->
     <pre>

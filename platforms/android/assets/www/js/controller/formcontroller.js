@@ -13,8 +13,8 @@
 
             $scope.createWordOrder= function(form) {
 
-              var url = 'http://10.0.2.2:9090/rest/api/2/issue/' + $('#woNumber option:selected').val() + '/';
-
+              //var url = 'http://10.0.2.2:9090/rest/api/2/issue/' + $('#woNumber option:selected').val() + '/';
+              var url  = base + "issue/" + $('#woNumber option:selected').val();
               console.log('url to post:%s',url);
 
               var postData = 
